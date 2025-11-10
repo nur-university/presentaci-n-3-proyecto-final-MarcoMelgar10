@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Crowdfunding app to final Project">
+        <meta name="author" content="Marco Antonio">
+        <title>Give a hand</title>
+        <link rel="stylesheet" href="../../../style/main.css">  
+        
+    </head>
+
+    <body>
+        <header>
+            <div id="principal_header">
+            <button id="principal_menu" class="hidden">
+            <span id="icon_menu" class="hidden"></span>
+            </button>
+             
+            <div id="sidebar" class="sidebar hidden">
+            <button id="close-btn" class="close-btn hidden">&times;</button>
+            <ul class="menu-list hidden">
+                <li><a href="../main/addProject/index.html">Add Project</a></li>
+                <li><a href="../main/manageProject/index.html">My Project</a></li>
+                <li><a href="../main/projectSaved/index.html">Saved</a></li>
+                <li><a onclick=filterProjects()>Filter</a></li>
+                <li><a href="../main/listProjectDonate/index.html">Contribution</a></li>
+                <h3 class="admin_section">Admin section</h3>
+                <li class="admin_section"><a href="../../admin/manageUser/index.html">Users</a></li>
+                <li class="admin_section"><a href="../../admin/manageProject/index.html">Projects</a></li>
+                <li class="admin_section"><a href="../../admin/approveProject/index.hmtl">Approve</a></li>
+                <li class="admin_section"><a href="../../admin/manageCategory/index.html">Manage Category</a></li>
+                <li class="admin_section"><a href="../../admin/adminPage/index.html">Page Administration</a></li>
+            </ul>
+            </div>
+            <div id="principal_title" onclick="goToMainPage()">
+                <img src="../../../../asset/icons/social-justice.png" alt="icon_page" onclick="addFavorite()">
+                <h1 >
+                        Give a hand
+                </h1>
+           </div>
+
+            <a href="../login/index.html" id="login_button">
+             <span id="login_icon"></span>                
+                Login/Sign in
+            </a>
+
+            <img src="../../../../asset/images/image10.png" alt="image user" id="image_header">
+            </div>
+        </header>
+
+    <!--Principla post like 'banner'-->
+
+        <div id="principal_post">
+            <div class="post_part_one">
+                <span id="post_photos">
+                    <img  id="photo_post" src="../../../../asset/images/image.png" alt="Post photos">
+                </span>     
+                <button class="post_donate_button hidden" onclick="goToDonation()">
+                    Donate
+                </button>
+                <p class="post_date_limit hidden" >20/10/2026</p> 
+            </div>
+            <div class="post_part_two">
+                <h2 class="post_title">Title</h2>
+                <h2 class="post_category">Category</h2>
+                <h3 class="post_author">Author</h3>
+                <p class="post_description">
+                    Crowdfunding is the use of small amounts of capital from a large number of individuals to finance 
+                    new business ventures. Depending on the type of crowdfunding, investors either donate money altruistically 
+                    or get rewards such as equity in the company that raised the money
+                </p>
+                <div class="post_footer">
+                    <div>
+                    <p class="post_percentage">40%</p>
+                    <p class="post_mount">1800</p>
+                    <p class="dolar">$</p>
+                   </div>
+                    <img class="favorite hidden" src="../../../../asset/icons/favorite.png" alt="save project image" onclick="addFavorite(this)">
+                </div>
+            </div>        
+        </div>
+        
+            
+        <main>
+        <div id="principal_container">
+           
+            <div class="item_post" onclick="openPostDetail(1)">
+                <img src="../../../../asset/images/image7.png" alt="image post" class="image_post">
+                <h2 class="author_post">Author</h2>
+                <p class="description_post">
+                    A brief project description is a concise summary that outlines the what,
+                    why, and who of a project. It should include the project's purpose, goals,
+                    key objectives, scope, and expected outcomes in a clear, simple format, often 
+                    a single paragraph or a few bullet points.
+                </p>
+            </div>
+
+            <div class="item_post" onclick="openPostDetail(2)">
+                <img src="../../../../asset/images/image2.png" alt="image post" class="image_post">
+                <h2 class="author_post">Author</h2>
+                <p class="description_post">
+                    A brief project description is a concise summary that outlines the what,
+                    why, and who of a project. It should include the project's purpose, goals,
+                    key objectives, scope, and expected outcomes in a clear, simple format, often 
+                    a single paragraph or a few bullet points.
+                </p>
+            </div>
+
+            <div class="item_post" onclick="openPostDetail(3)">
+                <img src="../../../../asset/images/image1.png" alt="image post" class="image_post">
+                <h2 class="author_post">Author</h2>
+                <p class="description_post">
+                    A brief project description is a concise summary that outlines the what,
+                    why, and who of a project. It should include the project's purpose, goals,
+                    key objectives, scope, and expected outcomes in a clear, simple format, often 
+                    a single paragraph or a few bullet points.
+                </p>
+            </div>
+
+            <div class="item_post" onclick="openPostDetail(4)">
+                <img src="../../../../asset/images/image3.png" alt="image post" class="image_post">
+                <h2 class="author_post">Author</h2>
+                <p class="description_post">
+                    A brief project description is a concise summary that outlines the what,
+                    why, and who of a project. It should include the project's purpose, goals,
+                    key objectives, scope, and expected outcomes in a clear, simple format, often 
+                    a single paragraph or a few bullet points.
+                </p>
+            </div>
+
+            <div class="item_post" onclick="openPostDetail(5)">
+                <img src="../../../../asset/images/image4.png" alt="image post" class="image_post">
+                <h2 class="author_post">Author</h2>
+                <p class="description_post">
+                    A brief project description is a concise summary that outlines the what,
+                    why, and who of a project. It should include the project's purpose, goals,
+                    key objectives, scope, and expected outcomes in a clear, simple format, often 
+                    a single paragraph or a few bullet points.
+                </p>
+            </div>
+
+            <div class="item_post" onclick="openPostDetail(6)">
+                <img src="../../../../asset/images/image5.png" alt="image post" class="image_post">
+                <h2 class="author_post">Author</h2>
+                <p class="description_post">
+                    A brief project description is a concise summary that outlines the what,
+                    why, and who of a project. It should include the project's purpose, goals,
+                    key objectives, scope, and expected outcomes in a clear, simple format, often 
+                    a single paragraph or a few bullet points.
+                </p>
+            </div>
+        </div>
+    </main>
+            
+            
+          
+    <div id="postModal" class="modal_post">
+        <div class="general_post">
+            <span onclick="closePostDetail()">&times;</span>
+            <div class="post_part_one">
+                <span id="post_photos">
+                    <img id="photo_post" src="../../../../asset/images/image.png" alt="Post photos">
+                </span>
+                <button class="post_donate_button" onclick="goToDonation()">Donate</button>
+                <p class="post_date_limit">20/10/2026</p>
+            </div>
+            <div class="post_part_two">
+                <h2 class="post_title">Project Title</h2>
+                <h2 class="post_category">Category</h2>
+                <h3 class="post_author">Author Name</h3>
+                <p class="post_description">
+                    Crowdfunding is the use of small amounts of capital from a large number of individuals to finance 
+                    new business ventures. Depending on the type of crowdfunding, investors either donate money altruistically 
+                    or get rewards such as equity in the company that raised the money
+                </p>
+                <div class="post_footer">
+                    <div>
+                    <p class="post_percentage">40%</p>
+                    <p class="post_mount">1800</p>
+                    <p class="dolar">$</p>
+                    </div>
+                    <img class="favorite hidden" src="../../../../asset/icons/favorite.png" alt="save project image" onclick="addFavorite(this)">
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="../../../../Js/logic.js"></script>
+    </body>
+
+    <footer>
+    <div id="view_buttons_container">
+        <button id="button_guest_view" class="view-button active" onclick="changeView('guest')">Guest View</button>
+        <button id="button_user_view" class="view-button" onclick="changeView('user')">User View</button>
+        <button id="button_admin_view" class="view-button" onclick="changeView('admin')">Admin View</button>
+    </div>
+</footer>
+</html>

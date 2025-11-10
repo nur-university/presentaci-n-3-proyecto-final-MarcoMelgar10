@@ -1,0 +1,388 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+      background-color: rgba(152, 127, 94, 0.63);
+    font-family: Arial, sans-serif;
+
+}
+
+#principal_header {
+   display: flex;
+    justify-content: center;
+    background-color:  #f5efe7;
+    padding: 1rem 2rem;
+}
+
+#principal_title {
+    display: flex;
+    font-size:xx-large;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    color: #2a2a2a;
+}
+#principal_title img {
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+.main_container {
+    display: flex;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.project_section {
+    flex: 1;
+    min-width: 300px;
+    background-color:  rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section_title {
+    font-size: 1.5em;
+    color: #2a2a2a;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.carousel_container {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel_text {
+    color: #666;
+    font-size: 0.9em;
+    text-align: center;
+    position: absolute;
+}
+
+.info_section {
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.info_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.info_title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #2a2a2a;
+}
+
+.project_amount {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2a2a2a;
+}
+
+.project_details {
+    margin: 15px 0;
+}
+
+.project_name {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #2a2a2a;
+    margin-bottom: 5px;
+}
+
+.project_author {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.project_description {
+    line-height: 1.6;
+    color: #333;
+    margin: 15px 0;
+    text-align: justify;
+    font-size: 0.95em;
+}
+
+.amount_section {
+    margin: 20px 0;
+}
+
+.amount_label {
+    font-size: 1em;
+    color: #2a2a2a;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.amount_display {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.amount_range {
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    outline: none;
+    background: linear-gradient(to right, #8a6d3b 0%, #8a6d3b 50%, #ddd 50%, #ddd 100%);
+}
+
+.amount_range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2a2a2a;
+    cursor: pointer;
+}
+
+.amount_range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2a2a2a;
+    cursor: pointer;
+    border: none;
+}
+
+.action_buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.btn {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn_cancel {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.btn_cancel:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-2px);
+}
+
+.btn_pay {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.btn_pay:hover {
+    background-color: #2a2a2a;
+    transform: translateY(-2px);
+}
+
+/* Payment Modal */
+.payment_section {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.payment_section.show {
+    display: flex;
+}
+
+.payment_content {
+    background-color: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    max-height: 90vh;
+    overflow-y: auto;
+    animation: slideDown 0.3s;
+}
+
+
+.payment_title {
+    font-size: 1.5em;
+    color: #2a2a2a;
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close_payment {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.close_payment:hover {
+    color: #000;
+}
+
+.form_group {
+    margin-bottom: 20px;
+}
+
+.form_label {
+    display: block;
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form_input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form_input:focus {
+    border-color: #8a6d3b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(138, 109, 59, 0.1);
+}
+
+.expiration_group {
+    display: flex;
+    gap: 10px;
+}
+
+.expiration_group select {
+    flex: 1;
+}
+
+.card_icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.card_icon {
+    width: 40px;
+    height: 25px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7em;
+    font-weight: bold;
+    color: white;
+}
+
+.visa {
+    background: linear-gradient(135deg, #1a1f71 0%, #0e4c92 100%);
+}
+
+.mastercard {
+    background: linear-gradient(135deg, #eb001b 0%, #f79e1b 100%);
+}
+
+.amex {
+    background: linear-gradient(135deg, #006fcf 0%, #00a3e0 100%);
+}
+
+.btn_confirm {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(to right, #4db8a8 0%, #3a9d8f 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn_confirm:hover {
+    background: linear-gradient(to right, #3a9d8f 0%, #2d7f73 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(77, 184, 168, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main_container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .project_section {
+        min-width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main_container {
+        padding: 10px;
+    }
+    .project_section {
+        padding: 15px;
+    }
+    .payment_content {
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}

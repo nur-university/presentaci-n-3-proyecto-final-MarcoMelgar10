@@ -1,0 +1,749 @@
+/*Main css file*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgba(152, 127, 94, 0.63);
+    font-family: Arial, sans-serif;
+}
+
+/*Header to make change*/
+#principal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:  #f5efe7;
+    padding: 1rem 2rem;
+}
+
+#principal_title {
+    display: flex;
+    font-size:xx-large;
+    align-items: center;
+    gap: 15px;
+    background-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    color: #2a2a2a;
+}
+#principal_title img {
+    height: 50px;
+    width: 50px;
+    margin-left: 15px;
+}
+#login_button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #2a2a2a;
+}
+
+#login_button:hover {
+    text-decoration: underline;
+}
+
+#principal_menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+#image_header{
+    height: 50px;
+    width: 50px;
+    display: none;
+    background-color: transparent;
+    border-radius: 50%;
+}
+/*Finish header section*/
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5efe7;
+    padding: 20px 2rem;
+}
+
+#view_buttons_container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.view-button {
+    padding: 0.8rem 1.5rem;
+    background-color: #2a2a2a;
+    color: white;
+    border: 2px solid #2a2a2a;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    min-width: 120px;
+}
+
+.view-button:hover {
+    background-color: #3a3a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.view-button.active {
+    background-color: #4a90e2;
+    border-color: #4a90e2;
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+}
+
+#principal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5efe7;
+    padding: 1rem 2rem;
+}
+
+#principal_title {
+    font-size: 40px;
+    background-color: transparent;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: underline;
+    color: #2a2a2a;
+}
+
+#login_button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #2a2a2a;
+}
+
+#login_button:hover {
+    text-decoration: underline;
+}
+
+#principal_menu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+#image_header {
+    height: 40px;
+    width: 40px;
+    display: none;
+    background-color: transparent;
+    border-radius: 50%;
+}
+
+
+/*Icon view*/
+#icon_menu {
+   display: inline-block;
+    width: 50px;
+    height: 35px;
+    background-image: url("../../asset/icons/principal_menu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#login_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+    background-image: url("../../asset/icons/user.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*
+#legenda {
+    position: relative;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d4385;
+    transition: all 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#legenda.active{
+    display: flex;
+}
+
+#legenda:hover {
+    background-color: #f0f0f0;
+    transform: rotate(90deg);
+}
+legenda be commented because it was causing issues with the display of the legenda element.
+if will be needed again, just remove the comment marks.
+*/
+
+/*Image view*/
+#post_photos {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+}
+
+#post_photos img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+
+/*Post view cssfile */
+#principal_post {
+    position: relative;
+    display: flex;
+    background-color: transparent;
+    color: #2a2a2a;
+    padding: 18px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+
+#principal_container{
+    display: flex; /*distribuye los elementos con espacios alrededor*/
+    background-color: transparent;
+    padding: 45px;
+    margin: auto; /*centra el contenedor*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 50px;
+}
+
+.item_post{
+    padding: 10px;
+    text-align: left;
+    margin: 40px;
+    background-color: #e8dfd5;
+    flex: 1 1 300px; /* Allow growing and shrinking, with a 300px basis */
+    max-width: 370px;
+    justify-content:center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 18px;
+}
+
+.item_post:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.8), 0 4px 12px rgba(0, 0, 0, 0.15);
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.image_post{
+    width: 300px;
+    height: 300px;
+    border-radius: 15px;
+    padding: 2px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: block;
+    margin: 0 auto;   
+}
+
+.author_post{
+    text-align: left;
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.description_post{
+    text-align: left;
+    text-size-adjust: initial;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    background-color: transparent;
+}
+
+.modal_post {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s;
+}
+
+.modal_post.show {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal_post .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.general_post {
+    display: flex;
+    background-color: transparent;
+    color: #2a2a2a;
+    overflow: hidden;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: slideDown 0.3s;
+}
+
+
+.post_part_one {
+    flex: 0 0 45%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #e8dfd5;
+    border-start-start-radius: 15px;
+    border-end-start-radius: 15px;
+    flex-wrap: wrap;
+}
+
+.post_donate_button {
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #2a2a2a;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.post_donate_button:hover {
+    background-color: #3a3a3a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post_date_limit {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 1rem;
+    background-color: transparent;
+}
+
+.post_date_limit::before {
+    content: "Limit: ";
+}
+
+.post_part_two {
+    flex: 1;
+    padding: 2rem 2rem 2rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: #f5efe7;
+    border-start-end-radius: 15px;
+    border-end-end-radius: 15px;
+    flex-wrap: wrap;
+}
+
+.post_title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    background-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.post_category {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #2a2a2a;
+    background-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.post_author {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #888;
+    margin-bottom: 1.5rem;
+    background-color: transparent;
+}
+
+.post_description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+    background-color: transparent;
+}
+
+.post_footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d0c5b8;
+    background-color: transparent;
+}
+.post_footer > div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 3px;
+}
+
+.post_percentage {
+    font-size: 1rem;
+    color: #888;
+    background-color: transparent;
+}
+
+.post_mount {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    line-height: 1;
+    background-color: transparent;
+}
+
+.dolar {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #2a2a2a;
+    background-color: transparent;
+}
+
+.favorite.hidden{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    mix-blend-mode: multiply;
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.favorite.hidden.active{
+    filter: drop-shadow(0 0 3px rgba(255, 255, 0, 0.7)) 
+            drop-shadow(0 0 8px rgba(255, 223, 0, 0.5));
+    transform: scale(1.1); 
+}
+/*Finish post section*/
+
+
+/*Menu options */
+
+.sidebar { 
+    position: fixed;
+    top: 0;
+    left: -250px; 
+    width: 250px;
+    height: 100%;
+    background-color: #22222237;
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: left 0.3s ease;
+    padding-top: 60px;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+.sidebar.active {
+    left: 0;
+}
+.sidebar.hidden {
+    display: none !important;
+}
+
+.sidebar.hidden.visible {
+    display: block !important;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.close-btn:hover {
+    opacity: 0.7;
+}
+
+.close-btn.hidden {
+    display: none !important;
+}
+
+.close-btn.hidden.visible {
+    display: block !important;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-list.hidden {
+    display: none !important;
+}
+
+.menu-list.hidden.visible {
+    display: block !important;
+}
+
+.menu-list li {
+    margin: 20px 0;
+}
+
+.menu-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list a:hover {
+    background-color: #444;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Modal */
+.modal_post {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_post.show {
+    display: flex !important;
+}
+
+/*To hidden and show element*/
+/* Manejo de elementos ocultos */
+.hidden { 
+    display: none !important; 
+}
+
+.hidden.visible { 
+    display: block !important; 
+}
+
+[class~="hidden"] {
+    display: none !important;
+}
+
+[class~="hidden"].visible {
+    display: block !important;
+}
+
+/* Secciones admin */
+.admin_section {
+    display: none !important;
+}
+
+.admin_section.visible {
+    display: block !important;
+}
+
+/* Modal */
+.modal_post.show {
+    display: flex !important;
+}
+
+/* Elementos del header - estados por defecto */
+#login_icon {
+    display: inline-block;
+}
+
+#login_icon.hidden {
+    display: none !important;
+}
+
+#login_button {
+    display: flex;
+}
+
+#login_button.hidden {
+    display: none !important;
+}
+
+#image_header { 
+    display: none;
+}
+
+#image_header.visible { 
+    display: block !important;
+    border-radius: 50%;
+}
+
+#principal_menu {
+    display: none;
+}
+
+#principal_menu.visible {
+    display: block !important;
+}
+
+#icon_menu {
+    display: none;
+}
+
+#icon_menu.visible {
+    display: block !important;
+}
+
+/* Responsive Design */
+
+/* Larger screens */
+@media (min-width: 1200px) {
+    #principal_container {
+        max-width: 1400px;
+        justify-content: center;
+    }
+}
+
+/* Tablets and smaller devices (<= 992px) */
+@media (max-width: 992px) {
+    #principal_header {
+        padding: 1rem 1.5rem;
+    }
+
+    #principal_post {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .post_part_one, .post_part_two {
+        flex: 1 1 100%;
+    }
+
+    .post_part_two {
+        padding: 1.5rem;
+        border-radius: 0;
+        border-end-start-radius: 15px;
+        border-end-end-radius: 15px;
+    }
+
+    .post_part_one {
+        border-radius: 0;
+        border-start-start-radius: 15px;
+        border-start-end-radius: 15px;
+    }
+
+    .general_post {
+        flex-direction: column;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    #principal_container {
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .item_post {
+        margin: 0;
+        max-width: 450px; /* Give a max-width on tablets */
+    }
+
+    .modal_post .close {
+        color: #333;
+    }
+}
+
+/* Phones (<= 576px) */
+@media (max-width: 576px) {
+    #principal_header {
+        padding: 0.8rem 1rem;
+    }
+
+    #principal_title {
+        font-size: x-large;
+        text-decoration: none; /* Remove underline on small screens */
+    }
+
+    #principal_title img {
+        height: 40px;
+        width: 40px;
+    }
+
+    .post_part_one, .post_part_two {
+        padding: 1rem;
+    }
+
+    .post_mount, .dolar {
+        font-size: 2rem;
+    }
+
+    .item_post {
+        max-width: 100%; /* Allow posts to take full width */
+    }
+}
+/*finish hidden view*/
