@@ -426,4 +426,9 @@ select.input_form {
         flex-wrap: wrap;
         justify-content: center;
     }
+     .project_card {
+        width: 100%;
+        max-width: 400px;
+    }
+
 }
