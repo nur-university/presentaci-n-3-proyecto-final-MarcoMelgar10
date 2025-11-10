@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="page" content="Projects donation">
+    <title>Give a hand</title>
+    <link rel="stylesheet" href="../../../../style/donate_project.css">
+</head>
+<body>
+        <header id="principal_header">
+             <div id="principal_title" onclick="goToMainPage()">
+               <img src="../../../../../asset/icons/social-justice.png" alt="icon_page">
+                <h1 >
+                        Give a hand
+                </h1>
+           </div>
+    </header>
+
+    <div class="main_container">
+        <div class="project_section">
+            <h2 class="section_title">Project about</h2>
+            <p style="font-size: 0.85em; color: #555; margin-bottom: 15px; font-style: italic;">
+                It be a carousel of images
+            </p>
+
+            <div class="carousel_container">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='500' height='300'%3E%3Crect fill='%23d4c4b0' width='500' height='300'/%3E%3Ctext x='50%25' y='50%25' font-size='20' fill='%23666' text-anchor='middle' dy='.3em'%3ECarousel Images%3C/text%3E%3C/svg%3E" alt="Project carousel">
+            </div>
+
+            <div class="info_section">
+                <div class="info_header">
+                    <h3 class="info_title">Information</h3>
+                    <span class="project_amount">1800$</span>
+                </div>
+
+                <div class="project_details">
+                    <h4 class="project_name">Project name</h4>
+                    <p class="project_author">Author</p>
+                    <p style="font-size: 0.85em; color: #555; margin-bottom: 10px;">
+                        This will be the principal Project or "in live" a a brave description
+                    </p>
+                </div>
+
+                <p class="project_description">
+                    Excepteur aliquid emerging, minim veniam enim aute carefully curated Ginza conversation exquisite perfect nostrud nisi intricate Content. Qui international first-class nulla ut. Punctual adipiscing, essential lovely quis denim tempor excepteur EU. Exclusive catalogs charming Scandinavian impeccable aute quality of life soft power pariatur Melbourne occaecat discerning. Qui wardrobe aliquis, et Porter destination esse marketplace officia helsinki equipper Basset hound. Zürich sleepy perfect consectetur.
+                </p>
+
+                <div class="amount_section">
+                    <p class="amount_label">Amount</p>
+                    <div class="amount_display">
+                        <span style="font-size: 0.9em; color: #555;">$0-100</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" class="amount_range" id="amountSlider">
+                </div>
+
+                <div class="action_buttons">
+                    <button class="btn btn_cancel" onclick="confirmCancel()">Cancel</button>
+                    <button class="btn btn_pay" onclick="showPaymentConfirm()">Pay</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="payment_section" id="paymentModal">
+            <div class="payment_content">
+                <h2 class="payment_title">
+                    Confirm Purchase
+                    <span class="close_payment" onclick="closePaymentModal()">&times;</span>
+                </h2>
+
+                <form id="paymentForm">
+                    <div class="form_group">
+                        <label class="form_label">Owner</label>
+                        <input type="text" class="form_input" placeholder="Card holder name" required>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label">Card Number</label>
+                        <input type="text" class="form_input" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                        <div class="card_icons">
+                            <div class="card_icon visa">VISA</div>
+                            <div class="card_icon mastercard">MC</div>
+                            <div class="card_icon amex">AMEX</div>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label">Expiration Date</label>
+                        <div class="expiration_group">
+                            <select class="form_input" required>
+                                <option value="">January</option>
+                                <option value="02">February</option>
+                                <option value="03">March</option>
+                                <option value="04">April</option>
+                                <option value="05">May</option>
+                                <option value="06">June</option>
+                                <option value="07">July</option>
+                                <option value="08">August</option>
+                                <option value="09">September</option>
+                                <option value="10">October</option>
+                                <option value="11">November</option>
+                                <option value="12">December</option>
+                            </select>
+                            <select class="form_input" required>
+                                <option value="">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                                <option value="2028">2028</option>
+                                <option value="2029">2029</option>
+                                <option value="2030">2030</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <label class="form_label">CVV</label>
+                        <input type="text" class="form_input" placeholder="123" maxlength="4" required>
+                    </div>
+
+                    <button type="submit" class="btn_confirm">Confirm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="confirmModal" class="confirm-modal" style="display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6);">
+        <div class="confirm-content" style="background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); width: 90%; max-width: 400px; text-align: center; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <h3 id="confirmTitle" style="color: #2a2a2a; margin-bottom: 15px; font-size: 1.3em;">Confirm Action</h3>
+            <p id="confirmMessage" style="color: #666; margin-bottom: 25px; line-height: 1.5;">Are you sure you want to proceed?</p>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="closeConfirmModal()" style="flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; background-color: #6c757d; color: white;">No</button>
+                <button id="confirmYesBtn" style="flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; background-color: #4db8a8; color: white;">Yes</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../../../../../Js/project/donateProject.js"></script>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give a hand</title>
+    <link rel="stylesheet" href="../../../../style/admin_project.css">
+</head>
+<body>
+    <header>
+        <div id="principal_header"> 
+            <div id="principal_title" onclick="goToMainPage()">
+                <img src="../../../../../asset/icons/social-justice.png" alt="icon_page">
+                <h1 >
+                        Give a hand
+                </h1>
+           </div>
+        </div>
+    </header>
+
+    <div class="section-title">
+        <H1>Your Projects</H1>
+    </div>
+
+    <div id="principal_container">
+        <div class="project_card status_refused" data-id="1">
+            <div class="card_header">
+                <h3>Photography Project</h3>
+                <svg class="card_icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                    
+                </svg>
+            </div>
+            <img class="card_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVpM6WFX4bRfRotxvNHJtyWKfnoapldBvhUQ&s" alt="Project image">
+            <div class="card_body">
+                <div class="card_status">Refused</div>
+                <p class="card_description">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very short story.</p>
+            </div>
+            <div class="card_footer">
+                <button class="btn_delete" onclick="confirmDelete(event, 1)">DELETE</button>
+            </div>
+        </div>
+        <div class="project_card status_observed" data-id="2">
+            <div class="card_header">
+                <h3>Community Garden</h3>
+                <svg class="card_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                 
+                </svg>
+            </div>
+            <img class="card_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVpM6WFX4bRfRotxvNHJtyWKfnoapldBvhUQ&s" alt="Project image">
+            <div class="card_body">
+                <div class="card_status">observed</div>
+                <p class="card_description">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very short story.</p>
+            </div>
+            <div class="card_footer">
+                <button class="btn_delete" onclick="confirmDelete(event, 2)">DELETE</button>
+            </div>
+        </div>
+        <div class="project_card status_review" data-id="3">
+            <div class="card_header">
+                <h3>Tech Innovation</h3>
+                <svg class="card_icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                
+                </svg>
+            </div>
+            <img class="card_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVpM6WFX4bRfRotxvNHJtyWKfnoapldBvhUQ&s" alt="Project image">
+            <div class="card_body">
+                <div class="card_status">review</div>
+                <p class="card_description">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very short story.</p>
+            </div>
+            <div class="card_footer">
+                <button class="btn_delete" onclick="confirmDelete(event, 3)">DELETE</button>
+            </div>
+        </div>
+        <div class="project_card status_published" data-id="4">
+            <div class="card_header">
+                <h3>Education Program</h3>
+                <svg class="card_icon" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                </svg>
+            </div>
+            <img class="card_image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVpM6WFX4bRfRotxvNHJtyWKfnoapldBvhUQ&s" alt="Project image">
+            <div class="card_body">
+                <div class="card_status">published</div>
+                <p class="card_description">Body text for whatever you'd like to say. Add main takeaway points, quotes, anecdotes, or even a very short story.</p>
+            </div>
+            <div class="card_footer">
+                <button class="btn_delete" onclick="confirmDelete(event, 4)">DELETE</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Project</h2>
+                <span class="close" onclick="closeEditModal()">&times;</span>
+            </div>
+            <form id="editForm">
+                <div class="form-group">
+                    <label class="font_form">Project name</label>
+                    <input type="text" id="edit_project_name" class="input_form" placeholder="Enter your project name">
+                </div>
+                
+                <div class="form-group">
+                    <label class="font_form">Mount</label>
+                    <input type="number" id="edit_project_mount" class="input_form" placeholder="Enter the project mount">
+                </div>
+                
+                <div class="form-group">
+                    <label for="edit_category" class="font_form">Category:</label>
+                    <select id="edit_category" class="input_form">
+                        <option value="food">Food</option>
+                        <option value="gym">Gym</option>
+                        <option value="diet">Diet</option>
+                        <option value="build">Construction</option>
+                        <option value="toil">Kids Toil</option>
+                        <option value="technology">Technology</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="font_form">Attach documentation</label>
+                    <input type="file" id="edit_file" class="input_form">
+                </div>
+                
+                <div class="form-group">
+                    <label class="font_form">Add Photo</label>
+                    <input type="file" id="edit_photo" class="input_form" accept="image/*">
+                </div>
+                
+                <div class="form-group">
+                    <label class="font_form">Description</label>
+                    <textarea id="edit_description" class="input_form" rows="8" placeholder="Description"></textarea>
+                </div>
+
+                <div class="action_buttons">
+                    <button >Confirm</button>
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
+ <div id="confirmModal" class="confirm-modal">
+        <div class="confirm-content">
+            <h3 id="confirmTitle">Confirm Action</h3>
+            <p id="confirmMessage">Are you sure you want to proceed?</p>
+            <div class="confirm-buttons">
+                <button class="btn-confirm-no" onclick="closeConfirmModal()">No</button>
+                <button class="btn-confirm-yes" id="confirmYesBtn">Yes</button>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+        <div class="action_buttons">
+        <button onclick="confirmCancel()">Cancel</button>
+        <button onclick="confirmApplyChanges()">Apply Changes</button>
+    </div>
+</footer>
+<script src="../../../../../Js/project/manajeProject.js"></script>
+</html>
